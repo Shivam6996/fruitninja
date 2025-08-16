@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Fruit Ninja - Classic</title>
+
+<!-- Classy font for the timer/title -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <h1 id="title"><span>Fruit</span> <span>Ninja</span></h1>
+
+    <div class="top-row">
+      <div id="score">Score: <span id="scoreVal">0</span></div>
+      <div id="timer">Time: <span id="timerVal">60</span></div>
+    </div>
+
+    <!-- Main menu -->
+    <div id="menu" class="panel">
+      <nav>
+        <button class="menu-btn" id="playBtn">Play</button>
+        <button class="menu-btn" id="settingsBtn">Settings</button>
+        <button class="menu-btn" id="soundBtn">Sound: <span id="soundState">On</span></button>
+        <button class="menu-btn" id="aboutBtn">About</button>
+        <button class="menu-btn quit" id="quitBtn" title="Quit">Quit</button>
+      </nav>
+    </div>
+
+    <!-- Settings modal -->
+    <div id="settings" class="panel hidden">
+      <h2>Settings</h2>
+      <div class="setting-row">
+        <label>Difficulty</label>
+        <div class="difficulty">
+          <button class="diff-btn" data-diff="easy">Easy</button>
+          <button class="diff-btn active" data-diff="medium">Medium</button>
+          <button class="diff-btn" data-diff="hard">Hard</button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <label>Music / FX</label>
+        <div>
+          <button id="muteToggle">Mute</button>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <button id="backFromSettings">Back</button>
+      </div>
+    </div>
+
+    <!-- About modal -->
+    <div id="about" class="panel hidden">
+      <h2>About</h2>
+      <p>Fruit Ninja clone built with canvas. Replace images and sounds in the folder `fruit-ninja/` to customize.</p>
+      <button id="backFromAbout">Back</button>
+    </div>
+  </div>
+
+  <!-- Game canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Preload assets note (you will replace these files) -->
+  <!-- Place your images & sounds in the fruit-ninja folder:
+       fruit1.png, fruit2.png, fruit3.png, bomb.png, splatter.png
+       slice.mp3, bomb.mp3, bg.mp3, throw.mp3
+  -->
+
+<script src="script.js"></script>
+</body>
+</html>
